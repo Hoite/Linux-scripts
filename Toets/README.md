@@ -7,6 +7,6 @@ Script wat behaalde punten voor een toets omzet naar een cijfer (0-10)
 Bijvoorbeeld:
 ./Toetspunten 30
 
-#Afsluiten
+# Afsluiten
 
 CTRL-C
