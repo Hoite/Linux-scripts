@@ -1,10 +1,20 @@
 #!/bin/env bash
 
+## Check of maximaal aantal punten is ingevoerd
+if [ -d $1 ]; then
+	echo 'Voer het maximaal haalbare aantal punten in'
+	echo './toetspunten 27'
+	exit 1
+fi
 
+## Zet het maximaal aantal punten in leesbare variabele (jaja, is overbodig)
+MAX=$(echo $1)
+
+## Infinite loop om behaalde punten in te voeren (CTRL-C stopt programma)
 while :
 do
 	read  -n 2 -p "Aantal Punten: " PUNTEN
-	RESULTAAT=$(python -c "print($PUNTEN/27*10)")
+	RESULTAAT=$(python -c "print($PUNTEN/$MAX*10)")
 	RESULTAAT=$(python -c "print(round($RESULTAAT,1))")
 	echo ""
 	echo ""
