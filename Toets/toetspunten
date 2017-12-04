@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+
+while :
+do
+	read  -n 2 -p "Aantal Punten: " PUNTEN
+	RESULTAAT=$(python -c "print($PUNTEN/27*10)")
+	RESULTAAT=$(python -c "print(round($RESULTAAT,1))")
+	echo ""
+	echo ""
+	echo $RESULTAAT
+done
