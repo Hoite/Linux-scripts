@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Dus je wilt naar huis?"
+read -p "Mijn naam is?  " answer
+
+if [[ $answer == "haas" ]]; then
+  echo "Correct, u mag naar huis"
+
+else
+  echo "Mijn naam is niet" $answer
+fi
