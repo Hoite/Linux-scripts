@@ -14,7 +14,7 @@ MAX=$(echo $1)
 while :
 do
 	read  -n 2 -p "Aantal Punten: " PUNTEN
-	RESULTAAT=$(python -c "print($PUNTEN/$MAX*10)")
+	RESULTAAT=$(python -c "print($PUNTEN/$MAX*9+1)")
 	RESULTAAT=$(python -c "print(round($RESULTAAT,1))")
 	echo ""
 	echo ""
